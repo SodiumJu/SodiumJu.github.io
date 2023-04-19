@@ -10,6 +10,7 @@
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
+.p{font-size:30px;}
 </style>
 </head>
 <body>
@@ -42,8 +43,12 @@ body {font-family: "Lato", sans-serif}
   <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a> -->
 </div>
 
+<img src="header.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  
 
   <!-- The about Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
@@ -173,14 +178,40 @@ body {font-family: "Lato", sans-serif}
   <!-- The projects Section -->
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="projects">
     <h2 class="w3-wide w3-center">SELF PROJECTS</h2>
-    
+    <div class="w3-row w3-margin">
+      <div class="w3-margin-bottom">
+        <a href="https://github.com/SodiumJu/LinearCDSfold" class='no-underline'>
+          <div>
+            <img src="LCDSfold.jpg" style="width:100%;min-height:200px" class="w3-hover-opacity">
+            <h2>LinearCDSfold</h2>
+            <p>
+              An algorithm for designing a CDS with the most stable secondary structure and maximal CAI among all possible ones translated into the same protein, and implemented it as the program LinearCDSfold. The time and space complexity is 𝑂(𝑛) and 𝑂(𝑛), respectively, where 𝑛 is the length of the CDS to be designed.
+
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="w3-margin-bottom">
+        <a href="http://genome.cs.nthu.edu.tw/Multi-CSAR/" class='no-underline'>
+          <div>
+            <img src="MCSAR.png" style="width:100%;min-height:200px" class="w3-hover-opacity">
+            <h2>Multi-CSAR</h2>
+            <p>
+              A web server for scaffolding contigs using multiple reference genomes.
+
+            </p>
+          </div>
+        </a>
+      </div>
+
+    </div>
   </div>
   
 <!-- End Page Content -->
 </div>
 
 <!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+<img src="footer.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
