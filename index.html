@@ -1,291 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Self Github Page</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./index.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-.p{font-size:30px;}
-</style>
+  <title>Self Github Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .hero {
+      background: linear-gradient(to right, #1e3a8a, #2563eb);
+      color: white;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT ME</a>
-    <a href="#courses" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COURSES PROJECTS</a>
-    <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SELF PROJECTS</a>
-    <a href="#side" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SIDE PROJECTS</a>
-    <!-- <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Merchandise</a>
-        <a href="#" class="w3-bar-item w3-button">Extras</a>
-        <a href="#" class="w3-bar-item w3-button">Media</a>
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-xl font-bold text-blue-600">YR</a>
+      <div class="hidden md:flex space-x-6 font-medium">
+        <a href="#about" class="hover:text-blue-500">About Me</a>
+        <a href="#projects" class="hover:text-blue-500">Papers</a>
+        <a href="#courses" class="hover:text-blue-500">Courses</a>
+        <a href="#side" class="hover:text-blue-500">Side Projects</a>
       </div>
-    </div> -->
-    
-  </div>
-</div>
+    </nav>
+  </header>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About Me</a>
-  <a href="#courses" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Courses Projects</a>
-  <a href="#projects" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Self Projects</a>
-  <a href="#side" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SIDE PROJECTS</a>
-  <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a> -->
-</div>
-
-<img src="header.jpg" class="w3-image w3-greyscale-min" style="width:100%">
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-
-  
-
-  <!-- The about Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
-    <h2 class="w3-wide">ABOUT ME</h2>
-    <p class="w3-opacity"><i>I love STAR WARS</i></p>
-    <p class="w3-justify">I am currently a Research Assistant at the Reinforcement Learning Lab in Academia Sinica, Taiwan. My recent work focuses on MuZero and AlphaZero in board games and Atari games. I also enjoy building small gadgets using Arduino.</p>
-    
-  </div>
-
-  <!-- The courses Section -->
-  <div class="w3-black" id="courses">
-    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-wide w3-center">COURSES PROJECTS</h2>
-
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        
-        <div class="w3-third w3-margin-bottom">
-          <a href="https://github.com/SodiumJu/NTHU_Deep_Learning">
-            <img src="Deep_Learning.jpg" alt="Deep Learning" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white w3-hover-opacity">
-              <p><b>Deep Learning</b></p>
-              <p class="w3-opacity">NTHU</p>
-
-            </div>
-          </a>
-        </div>
-        
-        
-        <div class="w3-third w3-margin-bottom">
-          <a href="https://github.com/SodiumJu/Data_Science">
-            <img src="data_science.jpg" alt="Data Science" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white w3-hover-opacity">
-              <p><b>Data Science</b></p>
-              <p class="w3-opacity">NTHU</p>
-            </div>
-          </a>
-        </div>
-        
-        <div class="w3-third w3-margin-bottom">
-          <a href="https://github.com/SodiumJu/NTU_Data_Structure">
-            <img src="data_structure.jpg" alt="Data Structures" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white w3-hover-opacity">
-              <p><b>Data Structures</b></p>
-              <p class="w3-opacity">NTU</p>
-            </div>
-          </a>
-        </div>
-
-      </div>
-
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        
-        <div class="w3-third w3-margin-bottom">
-          <a href="https://github.com/SodiumJu/Computer_Vision">
-            <img src="CV.jpg" alt="Computer Vision" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white w3-hover-opacity">
-              <p><b>Computer Vision</b></p>
-              <p class="w3-opacity">NTU</p>
-
-            </div>
-          </a>
-        </div>
-        
-        
-        <div class="w3-third w3-margin-bottom">
-          <a href="https://github.com/SodiumJu/Advanced_Logic_Synthesis">
-            <img src="ALS.jpg" alt="Advanced Logic Synthesis" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white w3-hover-opacity">
-              <p><b>Advanced Logic Synthesis</b></p>
-              <p class="w3-opacity">NTHU</p>
-
-            </div>
-          </a>
-        </div>
-        
-        <div class="w3-third w3-margin-bottom">
-          <a href="https://github.com/SodiumJu/VLSI_Physical_Design_Automation">
-            <img src="VLSI.jpg" alt="VLSI Physical Design Automation" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white w3-hover-opacity">
-              <p><b>VLSI Physical Design Automation</b></p>
-              <p class="w3-opacity">NTHU</p>
-
-            </div>
-          </a>
-        </div>
-
-      </div>
-
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        <div class="w3-third w3-margin-bottom">
-          <a href="https://github.com/SodiumJu/NTHU_Algorithm">
-            <img src="algo.jpg" alt="Design and Analysis of Algorithms" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white w3-hover-opacity">
-              <p><b>Design and Analysis of Algorithms</b></p>
-              <p class="w3-opacity">NTHU</p>
-
-            </div>
-          </a>
-        </div>
-      </div>
+  <!-- Hero -->
+  <section class="hero h-[50vh] flex items-center justify-center text-center px-4">
+    <div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Yan Ru Ju</h1>
+      <p class="text-lg md:text-xl opacity-90">Research Assistant @ Academia Sinica · Reinforcement Learning · AI for Games</p>
     </div>
-  </div>
-  
-  <!-- The projects Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="projects">
-    <h2 class="w3-wide w3-center">SELF PROJECTS</h2>
-    <div class="w3-row w3-margin">
-      <div class="w4-margin-bottom w3-padding-24">
-        <a href="https://github.com/SodiumJu/LinearCDSfold" class='no-underline'>
-          <div class="w3-hover-opacity">
-            <img src="LCDSfold.jpg" style="width:100%;min-height:200px">
-            <h2>LinearCDSfold</h2>
-            <div class="w3-container w3-light-grey">
-              <p>
-                An algorithm for designing a CDS with the most stable secondary structure and maximal CAI among all possible ones translated into the same protein, and implemented it as the program LinearCDSfold. The time and space complexity is 𝑂(𝑛) and 𝑂(𝑛), respectively, where 𝑛 is the length of the CDS to be designed.
-  
-              </p>
-            </div>
-            
-          </div>
-        </a>
-      </div>
-      <div class="w4-margin-bottom">
-        <a href="http://genome.cs.nthu.edu.tw/Multi-CSAR/" class='no-underline'>
-          <div class="w3-hover-opacity">
-            <img src="MCSAR.png" style="width:100%;min-height:200px">
-            <h2>Multi-CSAR</h2>
-            <div class="w3-container w3-light-grey">
-              <p>
-                Multi-CSAR is a multiple reference-based scaffolder that can efficiently produce more accurate scaffolds of a target draft genome by referring to multiple complete and/or incomplete genomes of related organisms.
-  
-              </p>
-            </div>
-            
-          </div>
-        </a>
-      </div>
+  </section>
 
-    </div>
-  </div>
+  <!-- About Me Section -->
+  <section id="about" class="max-w-4xl mx-auto py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+    <p class="mb-4">
+      I am currently a Research Assistant at the 
+      <strong>Reinforcement Learning in Gaming Lab, Academia Sinica, Taiwan</strong>. 
+      My recent work focuses on <strong>MuZero</strong> and <strong>AlphaZero</strong>, 
+      with applications to both board games and Atari environments.
+    </p>
 
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="side">
-    <h2 class="w3-wide">SIDE PROJECTS</h2>
-    <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        
-      <div class="w3-third w3-margin-bottom w3-hover-opacity">
-        <a href="https://youtu.be/Vwsxpd1FuOU">
-          <img src="spheric_r.jpg" alt="" style="width:100%" class="">
-          <div class="w3-container w3-black">
-            <p><b>Spherical Robot</b></p>
-            <p class="w3-opacity">click to see the vedio</p>
+    <p class="mb-4">
+      My current research interests include 
+      <strong>Mixture of Experts (MoE) models for gaming</strong>, 
+      <strong>imperfect-information games</strong>, 
+      and the <strong>application of large language models (LLMs) in games</strong>. 
+      Beyond gaming, I am also interested in broader research topics in 
+      <strong>reinforcement learning</strong> and the use of 
+      <strong>AI in biomedical domains</strong>.
+    </p>
 
-          </div>
-        </a>
-      </div>
+    <p class="mb-6">
+      I am currently seeking a <strong>PhD position</strong>. 
+      If you are interested, please feel free to contact me at 
+      <a href="mailto:yj5ju0bj@gmail.com" class="text-blue-600 hover:underline">yj5ju0bj@gmail.com</a>.
+    </p>
+
+    <!-- CV Download Button -->
+    <a href="Yan-Ru_Ju_CV-2025-8-17.pdf" download
+      class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">
+      Download CV
+    </a>
+  </section>
+
+
+  <!-- Papers -->
+<section id="projects" class="bg-gray-100 py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">Papers</h2>
+    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       
-      
-      <div class="w3-third w3-margin-bottom w3-hover-opacity">
-        <a href="https://youtube.com/shorts/QjgrKmpMiXw?feature=share">
-          <img src="wifi-relay.jpg" alt="" style="width:100%">
-          <div class="w3-container w3-black">
-            <p><b>A Remote Wi-Fi relay platform</b></p>
-            <p class="w3-opacity">click to see the vedio</p>
+      <!-- Project Card -->
+      <a href="https://rlg.iis.sinica.edu.tw/papers/restnet/" class="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden">
+        <img src="restnet_framework.png" alt="ResTNet" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">ResTNet</h3>
+          <p class="text-sm text-gray-600">Combines residual networks and Transformers for board games. Published in <strong>Proceedings of the 34th International Joint Conference on Artificial Intelligence
+(IJCAI-2025)</strong>.</p>
+        </div>
+      </a>
 
-          </div>
-        </a>
-      </div>
+      <a href="https://ieeexplore.ieee.org/document/11089932" class="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden">
+        <img src="muzero-decoder.png" alt="MuZero Decoder" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">MuZero Decoder</h3>
+          <p class="text-sm text-gray-600">
+            A novel approach to decoding in MuZero. Published in <strong>IEEE Transactions on Artificial Intelligence (IEEE TAI)</strong>.
+          </p>
+        </div>
+      </a>
 
-      <div class="w3-third w3-margin-bottom w3-hover-opacity">
-        <a href="">
-          <img src="Hamster_cooler.png" alt="" style="width:100%">
-          <div class="w3-container w3-black">
-            <p><b>Hamster Pod</b></p>
-            <p class="w3-opacity"></p>
+      <a href="https://www.computer.org/csdl/journal/bb/5555/01/11119306/28Zs1nScE00" class="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden">
+        <img src="LCDSfold.jpg" alt="LinearCDSfold" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">LinearCDSfold</h3>
+          <p class="text-sm text-gray-600">Algorithm for optimal CDS design with O(n) complexity.
+            Published in <strong>IEEE Transactions on Computational Biology and Bioinformatics (IEEE TCBB)</strong>.
+          </p>
+        </div>
+      </a>
 
-          </div>
-        </a>
-      </div>
+      <a href="http://genome.cs.nthu.edu.tw/Multi-CSAR/" class="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden">
+        <img src="MCSAR.png" alt="Multi-CSAR" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Multi-CSAR</h3>
+          <p class="text-sm text-gray-600">Efficient scaffolder using multiple reference genomes.
+            Published in <strong>Nucleic Acids Research</strong>.
+          </p>
+        </div>
+      </a>
 
     </div>
   </div>
-  
-<!-- End Page Content -->
-</div>
+</section>
 
-<!-- Image of location/map -->
-<img src="footer.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p class="w3-medium">YR1033</p>
-</footer>
+  <!-- Side Projects -->
+  <section id="side" class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Side Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <a href="https://youtu.be/Vwsxpd1FuOU" class="group bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden">
+        <img src="spheric_r.jpg" alt="Spherical Robot" class="w-full h-48 object-cover group-hover:scale-105 transition">
+        <div class="p-4 text-center">
+          <p class="font-semibold">Spherical Robot</p>
+          <p class="text-gray-500 text-sm">Video demo</p>
+        </div>
+      </a>
+      <a href="https://youtube.com/shorts/QjgrKmpMiXw?feature=share" class="group bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden">
+        <img src="wifi-relay.jpg" alt="Wi-Fi Relay" class="w-full h-48 object-cover group-hover:scale-105 transition">
+        <div class="p-4 text-center">
+          <p class="font-semibold">Wi-Fi Relay Platform</p>
+          <p class="text-gray-500 text-sm">Video demo</p>
+        </div>
+      </a>
+      <div class="group bg-white rounded-2xl shadow overflow-hidden">
+        <img src="Hamster_cooler.png" alt="Hamster Pod" class="w-full h-48 object-cover">
+        <div class="p-4 text-center">
+          <p class="font-semibold">Hamster Pod</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
+  <!-- Courses -->
+  <section id="courses" class="bg-gray-100 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Courses Projects</h2>
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <a href="https://github.com/SodiumJu/NTHU_Deep_Learning" class="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden">
+          <img src="Deep_Learning.jpg" alt="Deep Learning" class="w-full h-40 object-cover">
+          <div class="p-4 text-center">
+            <p class="font-semibold">Deep Learning</p>
+            <p class="text-gray-500 text-sm">NTHU</p>
+          </div>
+        </a>
+        <a href="https://github.com/SodiumJu/Data_Science" class="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden">
+          <img src="data_science.jpg" alt="Data Science" class="w-full h-40 object-cover">
+          <div class="p-4 text-center">
+            <p class="font-semibold">Data Science</p>
+            <p class="text-gray-500 text-sm">NTHU</p>
+          </div>
+        </a>
+        <a href="https://github.com/SodiumJu/NTU_Data_Structure" class="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden">
+          <img src="data_structure.jpg" alt="Data Structures" class="w-full h-40 object-cover">
+          <div class="p-4 text-center">
+            <p class="font-semibold">Data Structures</p>
+            <p class="text-gray-500 text-sm">NTU</p>
+          </div>
+        </a>
+      </div>
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <a href="https://github.com/SodiumJu/Computer_Vision" class="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden">
+          <img src="CV.jpg" alt="Computer Vision" class="w-full h-40 object-cover">
+          <div class="p-4 text-center">
+            <p class="font-semibold">Computer Vision</p>
+            <p class="text-gray-500 text-sm">NTU</p>
+          </div>
+        </a>
 
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
+        <a href="https://github.com/SodiumJu/Advanced_Logic_Synthesis" class="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden">
+          <img src="ALS.jpg" alt="Advanced Logic Synthesis" class="w-full h-40 object-cover">
+          <div class="p-4 text-center">
+            <p class="font-semibold">Advanced Logic Synthesis</p>
+            <p class="text-gray-500 text-sm">NTHU</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/SodiumJu/VLSI_Physical_Design_Automation" class="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden">
+          <img src="VLSI.jpg" alt="VLSI Physical Design Automation" class="w-full h-40 object-cover">
+          <div class="p-4 text-center">
+            <p class="font-semibold">VLSI Physical Design Automation</p>
+            <p class="text-gray-500 text-sm">NTHU</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <a href="https://github.com/SodiumJu/NTHU_Algorithm" class="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden">
+          <img src="algo.jpg" alt="Design and Analysis of Algorithms" class="w-full h-40 object-cover">
+          <div class="p-4 text-center">
+            <p class="font-semibold">Design and Analysis of Algorithms</p>
+            <p class="text-gray-500 text-sm">NTHU</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-8 text-center text-gray-500 border-t">
+    <p>© 2025 YR1033 · Made with ❤️</p>
+  </footer>
 
 </body>
 </html>
-
