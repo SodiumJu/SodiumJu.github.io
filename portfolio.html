@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Portfolio - Yan Ru Ju</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Simple Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-blue-600 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                        clip-rule="evenodd" />
+                </svg>
+                Back to Home
+            </a>
+            <h1 class="text-lg font-semibold">Portfolio Showcase</h1>
+        </nav>
+    </header>
+
+    <main class="max-w-[1600px] mx-auto py-16 px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Detailed Portfolio</h2>
+            <div class="text-xl text-gray-600 leading-relaxed max-w-6xl mx-auto">
+                <p>
+                    The following works integrate core elements of <strong>technical</strong>,
+                    <strong>interpretive</strong>, and <strong>creative</strong> research.
+                    On the technical side, projects such as <strong>ResTNet</strong> and <strong>MuZero Decoder</strong>
+                    employ <strong>C++</strong> and <strong>PyTorch</strong> to implement deep learning models, tree
+                    search algorithms, and visualization tools, while <strong>LinearCDSfold</strong> focuses on
+                    efficient <strong>C++</strong> algorithm design to accelerate biological sequence optimization.
+                    From an interpretive perspective, <strong>ResTNet</strong>, <strong>Multi-CSAR</strong>, and
+                    <strong>MuZero Decoder</strong> emphasize interpretability by providing visualization and analytical
+                    tools that support human understanding and explanation of AI planning processes.
+                    In addition, my creative projects—including the <strong>Spherical Robot</strong>, <strong>Smart
+                        Plug</strong>, and <strong>Hamster SmartPod</strong>—explore the design of interactive systems
+                    that address everyday problems through hands-on engineering and experimentation.
+                </p>
+            </div>
+        </div>
+
+        <!-- RL & AI Projects -->
+        <section class="mb-24">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="text-3xl font-bold text-blue-700">RL & AI</h2>
+                <div class="h-[2px] bg-blue-100 flex-grow"></div>
+            </div>
+
+            <!-- ResTNet -->
+            <div
+                class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col lg:flex-row mb-12">
+                <div class="lg:w-2/5 relative overflow-hidden min-h-[300px]">
+                    <img src="restnet_framework.png" alt="ResTNet"
+                        class="w-full h-full object-cover transition duration-500">
+                </div>
+                <div class="lg:w-3/5 p-10 flex flex-col justify-center">
+                    <span class="text-blue-600 text-sm font-bold uppercase tracking-wider">Reinforcement Learning in
+                        Games</span>
+                    <h3 class="text-3xl font-bold mt-2 mb-4">ResTNet</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        Although AlphaZero has achieved superhuman performance in board games, recent studies reveal its
+                        limitations in handling scenarios requiring a comprehensive understanding of the entire board,
+                        such as recognizing long-sequence patterns in Go. To address this challenge, we propose ResTNet,
+                        a network that interleaves residual and Transformer blocks to bridge local and global knowledge.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        ResTNet improves playing strength across multiple board games, increasing win rate significantly
+                        in 9x9 Go, 19x19 Go, and Hex. In addition, ResTNet effectively processes global information and
+                        tackles long-sequence patterns like circular and ladder patterns in Go.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span
+                            class="px-4 py-2 bg-blue-50 rounded-full text-sm font-semibold text-blue-600">AlphaZero</span>
+                        <span
+                            class="px-4 py-2 bg-blue-50 rounded-full text-sm font-semibold text-blue-600">Transformers</span>
+                        <span class="px-4 py-2 bg-blue-50 rounded-full text-sm font-semibold text-blue-600">Deep
+                            Learning</span>
+                        <span class="px-4 py-2 bg-blue-50 rounded-full text-sm font-semibold text-blue-600">XAI</span>
+                    </div>
+                    <div class="flex flex-wrap gap-6 mt-4">
+                        <a href="https://rlg.iis.sinica.edu.tw/papers/restnet/" target="_blank"
+                            class="inline-flex items-center text-blue-600 font-bold hover:underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                            View Paper Page
+                        </a>
+                        <a href="https://github.com/rlglab/restnet" target="_blank"
+                            class="inline-flex items-center text-gray-800 font-bold hover:underline">
+                            <svg class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://rlg.iis.sinica.edu.tw/papers/restnet/assets/Bridging_Local_and_Global_Knowledge_via_Transformer_in_Board_Games_Slides.pdf"
+                            target="_blank" class="inline-flex items-center text-orange-600 font-bold hover:underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                            </svg>
+                            View Slides
+                        </a>
+                        <a href="https://rlg.iis.sinica.edu.tw/papers/restnet/assets/Bridging_Local_and_Global_Knowledge_via_Transformer_in_Board_Games_Poster.pdf"
+                            target="_blank" class="inline-flex items-center text-rose-600 font-bold hover:underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            View Poster
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MuZero Decoder -->
+            <div
+                class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col lg:flex-row mb-12">
+                <div class="lg:w-2/5 relative overflow-hidden min-h-[300px]">
+                    <img src="muzero-decoder.png" alt="MuZero Decoder"
+                        class="w-full h-full object-cover transition duration-500">
+                </div>
+                <div class="lg:w-3/5 p-10 flex flex-col justify-center">
+                    <span class="text-blue-600 text-sm font-bold uppercase tracking-wider">Reinforcement Learning in
+                        Games</span>
+                    <h3 class="text-3xl font-bold mt-2 mb-4">MuZero Decoder</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        A novel approach to decoding in MuZero. This work focuses on interpreting and demystifying the
+                        internal planning mechanisms of reinforcement learning models.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        By providing techniques to decode the learned model's internal states, this research allows for
+                        a better understanding of how the agent anticipates future states and rewards, leading to more
+                        transparent and explainable AI in complex gaming environments.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span
+                            class="px-4 py-2 bg-blue-50 rounded-full text-sm font-semibold text-blue-600">MuZero</span>
+                        <span class="px-4 py-2 bg-blue-50 rounded-full text-sm font-semibold text-blue-600">XAI</span>
+                        <span class="px-4 py-2 bg-blue-50 rounded-full text-sm font-semibold text-blue-600">Model-Based
+                            RL</span>
+                    </div>
+                    <div class="flex flex-wrap gap-6 mt-4">
+                        <a href="https://rlg.iis.sinica.edu.tw/papers/demystifying-muzero-planning/" target="_blank"
+                            class="inline-flex items-center text-blue-600 font-bold hover:underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                            View Paper Page
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11089932" target="_blank"
+                            class="inline-flex items-center text-blue-600 font-bold hover:underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                            IEEE PDF
+                        </a>
+                        <a href="https://github.com/rlglab/muzero-decoder" target="_blank"
+                            class="inline-flex items-center text-gray-800 font-bold hover:underline">
+                            <svg class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Computational Biology Projects -->
+        <section class="mb-24">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="text-3xl font-bold text-purple-700">Computational Biology</h2>
+                <div class="h-[2px] bg-purple-100 flex-grow"></div>
+            </div>
+
+            <!-- LinearCDSfold -->
+            <div
+                class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col lg:flex-row mb-12">
+                <div class="lg:w-2/5 relative overflow-hidden min-h-[300px]">
+                    <img src="LCDSfold_cover.png" alt="LinearCDSfold"
+                        class="w-full h-full object-cover transition duration-500">
+                </div>
+                <div class="lg:w-3/5 p-10 flex flex-col justify-center">
+                    <span class="text-purple-600 text-sm font-bold uppercase tracking-wider">Bioinformatics
+                        Research</span>
+                    <h3 class="text-3xl font-bold mt-2 mb-4">LinearCDSfold</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        Currently, a dynamic programming (DP) algorithm CDSfold has been proposed to design a CDS by
+                        minimizing the minimum free energy (MFE) of its secondary structure. However, it has been
+                        questioned recently that such a DP algorithm is difficult to be modified to design a CDS when
+                        attempting to jointly optimize its secondary structure stability and codon adaptation index
+                        (CAI).
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        In this study, we successfully modify the DP algorithm of CDSfold to exactly solve this kind of
+                        CDS design problem in O(L³) time and O(L²) space. We further accelerate this algorithm by beam
+                        search, enabling it to design high-quality approximate CDS in O(L) time, implemented as
+                        <strong>LinearCDSfold</strong>.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="px-4 py-2 bg-purple-50 rounded-full text-sm font-semibold text-purple-600">Dynamic
+                            Programming</span>
+                        <span class="px-4 py-2 bg-purple-50 rounded-full text-sm font-semibold text-purple-600">Beam
+                            Search</span>
+                        <span
+                            class="px-4 py-2 bg-purple-50 rounded-full text-sm font-semibold text-purple-600">Computational
+                            Biology</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://arxiv.org/abs/2411.04580" target="_blank"
+                            class="inline-flex items-center text-purple-600 font-bold hover:underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                            View Paper Page
+                        </a>
+                        <a href="https://github.com/ablab-nthu/LinearCDSfold" target="_blank"
+                            class="inline-flex items-center text-gray-800 font-bold hover:underline">
+                            <svg class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Multi-CSAR -->
+            <div
+                class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col lg:flex-row mb-12">
+                <div class="lg:w-2/5 relative overflow-hidden min-h-[300px]">
+                    <img src="Multi-CSAR_cover.png" alt="Multi-CSAR"
+                        class="w-full h-full object-cover transition duration-500">
+                </div>
+                <div class="lg:w-3/5 p-10 flex flex-col justify-center">
+                    <span class="text-purple-600 text-sm font-bold uppercase tracking-wider">Bioinformatics
+                        Research</span>
+                    <h3 class="text-3xl font-bold mt-2 mb-4">Multi-CSAR</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        Multi-CSAR is an efficient scaffolder designed to utilize multiple reference genomes to improve
+                        the quality of genomic assemblies. By interpreting relationships between multiple related
+                        genomes, it provides a more accurate and contiguous representation of the target genome.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        This research addresses the challenges of fragmented assemblies in genome sequencing, showing
+                        that leveraging evolutionary conservation across multiple references can significantly enhance
+                        scaffolding performance and reliability.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="px-4 py-2 bg-purple-50 rounded-full text-sm font-semibold text-purple-600">Genome
+                            Assembly</span>
+                        <span
+                            class="px-4 py-2 bg-purple-50 rounded-full text-sm font-semibold text-purple-600">Bioinformatics</span>
+                        <span
+                            class="px-4 py-2 bg-purple-50 rounded-full text-sm font-semibold text-purple-600">Comparative
+                            Genomics</span>
+                    </div>
+                    <div class="flex flex-wrap gap-6 mt-4">
+                        <a href="https://academic.oup.com/nar/article/50/W1/W500/6582185" target="_blank"
+                            class="inline-flex items-center text-purple-600 font-bold hover:underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                            View Paper Page
+                        </a>
+                        <a href="http://genome.cs.nthu.edu.tw/Multi-CSAR/" target="_blank"
+                            class="inline-flex items-center text-blue-600 font-bold hover:underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                            </svg>
+                            Web Server
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Creative Projects -->
+        <section class="mb-24">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="text-3xl font-bold text-emerald-700">Creative</h2>
+                <div class="h-[2px] bg-emerald-100 flex-grow"></div>
+            </div>
+
+            <!-- Spherical Robot -->
+            <div id="spherical-robot"
+                class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col lg:flex-row mb-12">
+                <div class="lg:w-2/5 relative overflow-hidden min-h-[300px]">
+                    <img src="spheric_r.jpg" alt="Spherical Robot"
+                        class="w-full h-full object-cover transition duration-500">
+                </div>
+                <div class="lg:w-3/5 p-10 flex flex-col justify-center">
+                    <span class="text-emerald-600 text-sm font-bold uppercase tracking-wider">Engineering Project</span>
+                    <h3 class="text-3xl font-bold mt-2 mb-4">Spherical Robot Enhancement</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        A creative integration of hardware and software to develop a maneuverable spherical robot. This
+                        project involved designing mechanical drive systems and implementing custom control logic for
+                        smooth movement.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        The challenge was to maintain stability while rolling and providing real-time response to user
+                        inputs via a wireless interface. It showcases a blend of creative problem-solving and
+                        electromechanical engineering.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span
+                            class="px-4 py-2 bg-emerald-50 rounded-full text-sm font-semibold text-emerald-600">Robotics</span>
+                        <span
+                            class="px-4 py-2 bg-emerald-50 rounded-full text-sm font-semibold text-emerald-600">Control
+                            Theory</span>
+                        <span
+                            class="px-4 py-2 bg-emerald-50 rounded-full text-sm font-semibold text-emerald-600">Arduino/ESP32</span>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=Vwsxpd1FuOU" target="_blank"
+                        class="inline-flex items-center text-red-600 font-bold hover:underline mb-6">
+                        <svg class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                        Watch Demo Video
+                    </a>
+
+                    <!-- Extra Images Grid -->
+                    <div class="grid grid-cols-2 gap-4 mt-2">
+                        <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 aspect-video">
+                            <img src="spheric_r-1.png" alt="Spherical Robot Enhancement Detail 1"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 aspect-video">
+                            <img src="spheric_r-2.png" alt="Spherical Robot Enhancement Detail 2"
+                                class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Smart-Plug -->
+            <div id="smart-plug"
+                class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col lg:flex-row mb-12">
+                <div class="lg:w-2/5 relative overflow-hidden min-h-[300px]">
+                    <img src="wifi_relay_cover.jpg" alt="Smart-Plug"
+                        class="w-full h-full object-cover transition duration-500">
+                </div>
+                <div class="lg:w-3/5 p-10 flex flex-col justify-center">
+                    <span class="text-emerald-600 text-sm font-bold uppercase tracking-wider">IoT & Hardware
+                        Project</span>
+                    <h3 class="text-3xl font-bold mt-2 mb-4">Smart-Plug</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        Developed an intelligent Smart-Plug system that enables users to remotely control power outlets
+                        via a dedicated mobile application. The hardware design was specifically engineered to support
+                        standard voltage and high-capacity extension cords, ensuring compatibility with common household
+                        setups.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span
+                            class="px-4 py-2 bg-emerald-50 rounded-full text-sm font-semibold text-emerald-600">IoT</span>
+                        <span class="px-4 py-2 bg-emerald-50 rounded-full text-sm font-semibold text-emerald-600">Home
+                            Automation</span>
+                        <span
+                            class="px-4 py-2 bg-emerald-50 rounded-full text-sm font-semibold text-emerald-600">Embedded
+                            Systems</span>
+                        <span class="px-4 py-2 bg-emerald-50 rounded-full text-sm font-semibold text-emerald-600">Mobile
+                            Integration</span>
+                    </div>
+                    <a href="https://www.youtube.com/shorts/QjgrKmpMiXw" target="_blank"
+                        class="inline-flex items-center text-red-600 font-bold hover:underline mb-6">
+                        <svg class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                        Watch Demo Video
+                    </a>
+
+                    <!-- Extra Images Grid -->
+                    <div class="grid grid-cols-2 gap-4 mt-2">
+                        <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 aspect-video">
+                            <img src="smart-plug-1.png" alt="Smart Plug UI/Interior" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 aspect-video">
+                            <img src="smart-plug-2.png" alt="Smart Plug Prototype" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Hamster SmartPod Project -->
+            <div id="hamster-smartpod"
+                class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col lg:flex-row mb-12">
+                <div class="lg:w-2/5 relative overflow-hidden min-h-[300px]">
+                    <img src="Hamster_cooler_cover.png" alt="Hamster SmartPod"
+                        class="w-full h-full object-cover transition duration-500">
+                </div>
+                <div class="lg:w-3/5 p-10 flex flex-col justify-center">
+                    <span class="text-emerald-600 text-sm font-bold uppercase tracking-wider">IoT & Pet Care
+                        Project</span>
+                    <h3 class="text-3xl font-bold mt-2 mb-4">Hamster SmartPod</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        An innovative IoT-enabled habitat designed to monitor and enhance the well-being of small pets.
+                        This project integrates environmental sensors and automated care systems to ensure an optimal
+                        living environment.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        Developed as a creative solution to pet care challenges, the SmartPod allows for real-time
+                        tracking of habitat conditions and activity levels through a connected interface, demonstrating
+                        the application of technology in everyday life.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span
+                            class="px-4 py-2 bg-emerald-50 rounded-full text-sm font-semibold text-emerald-600">IoT</span>
+                        <span class="px-4 py-2 bg-emerald-50 rounded-full text-sm font-semibold text-emerald-600">Smart
+                            Home</span>
+                        <span
+                            class="px-4 py-2 bg-emerald-50 rounded-full text-sm font-semibold text-emerald-600">Hardware
+                            Design</span>
+                    </div>
+
+                    <!-- Extra Images Grid -->
+                    <div class="grid grid-cols-2 gap-4 mt-2">
+                        <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 aspect-video">
+                            <img src="hamster smart pod-1.png" alt="Hamster SmartPod UI/Detail"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 aspect-video">
+                            <img src="cooler.png" alt="Hamster Cooler Detail" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white py-12 text-center text-gray-400 border-t mt-20">
+        <p>© 2025 Yan Ru Ju · Built with passion</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="imageModal"
+        class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 cursor-zoom-out"
+        onclick="closeModal()">
+        <button class="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors" onclick="closeModal()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <img id="modalImage" src="" alt="Full size view"
+            class="max-w-full max-h-[90vh] rounded-xl shadow-2xl object-contain" onclick="event.stopPropagation()">
+    </div>
+
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = src;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Add click events to all project images
+        document.querySelectorAll('img').forEach(img => {
+            if (!img.closest('nav')) { // Skip navbar icons if any
+                img.classList.add('cursor-zoom-in');
+                img.onclick = function () {
+                    openModal(this.src);
+                };
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+
+</body>
+
+</html>
